@@ -1,0 +1,23 @@
+# backend dependencies
+Server/node_modules/
+
+# backend build folder
+Server/dist/
+
+# backend environment files
+Server/.env
+Server/.env.local
+
+# logs
+Server/logs
+Server/*.log
+
+# coverage
+Server/coverage/
+
+# temporary files
+Server/*.tmp
+Server/*.temp
+
+# typescript build info
+Server/*.tsbuildinfo
