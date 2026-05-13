@@ -7,7 +7,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.use("api/weather", weatherRouter);
+app.use("/api/weather", weatherRouter);
 
 app.get("/api/health", (_, res) => {
     res.json({

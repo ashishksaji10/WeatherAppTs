@@ -13,10 +13,8 @@ export const getWeather = async(req:Request, res:Response) => {
                 message:"City is required"
             })
         }
-
-        const weatherData = await getWeatherData(city);
-        console.log(weatherData,'Raw Data Response');
         
+        const weatherData = await getWeatherData(city);
 
         const formattedData = {
             city: weatherData.location.name,
