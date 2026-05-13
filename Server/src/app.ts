@@ -6,8 +6,13 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.get("/", (req, res) => {
-  res.send("Backend running...");
+// app.get("api/", )
+
+app.get("/api/health", (_, res) => {
+    res.json({
+      success: true,
+      message: "Server is running",
+    });
 });
 
 export default app;
