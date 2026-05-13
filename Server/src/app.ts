@@ -1,12 +1,13 @@
 import express from "express";
 import cors from "cors";
+import weatherRouter from "./routes/weather.routes.js";
 
 const app = express();
 
 app.use(cors());
 app.use(express.json());
 
-// app.get("api/", )
+app.use("api/weather", weatherRouter);
 
 app.get("/api/health", (_, res) => {
     res.json({
