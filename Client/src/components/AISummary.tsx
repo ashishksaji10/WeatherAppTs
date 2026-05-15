@@ -1,13 +1,20 @@
+import { Smile } from 'lucide-react';
+
 interface AISummaryProps {
   summary: string;
 }
 
 const AISummary = ({ summary }: AISummaryProps) => {
-  return (
-    <div className="bg-slate-800 p-6 rounded-2xl w-full max-w-xl shadow-lg">
-      <h2 className="text-2xl font-bold mb-4">🤖 AI Summary</h2>
+  if (!summary) return null;
 
-      <p className="text-lg leading-8">{summary}</p>
+  const cleanSummary = summary.replace(/^["']|["']$/g, '').trim();
+
+  return (
+    <div className="pt-6 border-t border-white/10">
+      <p className="text-lg leading-relaxed text-white/90 font-light flex gap-3 items-start">
+        <Smile className="text-purple-300 shrink-0 mt-1" size={20} />
+        <span>{cleanSummary}</span>
+      </p>
     </div>
   );
 };
